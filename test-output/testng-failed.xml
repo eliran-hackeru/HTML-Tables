@@ -3,18 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.E2ETest">
+      <class name="testcases.PrintTest">
         <methods>
           <include name="setUpSuite"/>
+          <include name="PrintApp"/>
           <include name="seExtent"/>
           <include name="endReport"/>
           <include name="tearDown"/>
           <include name="tearDownMethod"/>
-          <include name="EnglishApp"/>
-          <include name="SuomiApp"/>
           <include name="setupApplication"/>
         </methods>
-      </class> <!-- testcases.E2ETest -->
+      </class> <!-- testcases.PrintTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

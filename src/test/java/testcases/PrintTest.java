@@ -20,6 +20,12 @@ public class PrintTest extends TestBaseClass {
 		tablePage.numOfRaws();
 		
 		tablePage.numOfCals();
+		
+		tablePage.printValue(5, 2);
+		
+		System.out.println(tablePage.getTableCellText(tablePage.getRaws(), 2, "Yoshi Tannamuri", 3));
+		
+		
 	}
 
 }

@@ -1,6 +1,10 @@
 package pages;
 
 import java.util.List;
+
+import javax.xml.xpath.XPath;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +14,8 @@ import org.testng.Assert;
 public class TablePage {
 
 	WebDriver driver;
+	
+	private WebElement value;
 
 	public TablePage(WebDriver ldriver)
 	{
@@ -30,12 +36,45 @@ public class TablePage {
 		System.out.println("Number of cols are : " +cols.size());
 	}
 	
-/*	public String getTableCellText(WebElement table, int searchColumn,
-			String searchText, int returnColumntext) {
+	public WebElement getValue(int raw, int col)
+	{
+		value = driver.findElement(By.xpath("//*[@id=\"customers\"]/tbody/tr["+(raw+1)+"]/td["+col+"]"));
 		
+		//*[@id="customers"]/tbody/tr[2]/td[3]
+		
+		return value;
 	}
 	
-	public boolean verifyTableCellText(WebElement table, int searchColumn,
+	public void printValue(int raw, int col)
+	{
+		value = getValue(raw, col);
+		
+		System.out.println(value.getText());
+	}
+	
+	public List<WebElement> getRaws()
+	{
+		return raws;
+	}
+		
+	public String getTableCellText(List<WebElement> table, int searchColumn,
+			String searchText, int returnColumntext) {
+		
+		for(int i=1; i<table.size(); i++)
+		{
+			value = getValue(i, searchColumn);
+			
+			if (value.getText().equalsIgnoreCase(searchText))
+			{
+				value = getValue(i, returnColumntext);
+				break;
+			}
+		}		
+		
+		return value.getText();
+	}
+	
+/*	public boolean verifyTableCellText(WebElement table, int searchColumn,
 			String searchText, int returnColumnText, String expectedText) {
 		
 	}
