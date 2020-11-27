@@ -21,11 +21,11 @@ public class PrintTest extends TestBaseClass {
 		
 		tablePage.numOfCals();
 		
-		tablePage.printValue(2, 2);
+		tablePage.printValue(5, 1);
 		
-		System.out.println(tablePage.getTableCellText(tablePage.getTable(), 2, "Francisco Chang", 3));
+		System.out.println(tablePage.getTableCellText(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3));
 		
-		
+		System.out.println(tablePage.verifyTableCellText(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3, "Canada"));
 	}
 
 }

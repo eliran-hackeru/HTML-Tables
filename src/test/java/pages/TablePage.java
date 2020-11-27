@@ -14,84 +14,86 @@ import org.testng.Assert;
 public class TablePage {
 
 	WebDriver driver;
-	
+
 	private WebElement value;
 
-	public TablePage(WebDriver ldriver)
-	{
-		this.driver=ldriver;
+	public TablePage(WebDriver ldriver) {
+		this.driver = ldriver;
 	}
-	
-	@FindBy(id = "customers") WebElement table;
-	
-	@FindBy (xpath = "//*[@id=\"customers\"]/tbody/tr") List<WebElement> raws;
-	
-	@FindBy (xpath = "//*[@id=\"customers\"]/tbody/tr[1]/th") List<WebElement> cols;
-	
-	public void numOfRaws()
-	{
-		System.out.println("Number of raws are : " +raws.size());
+
+	@FindBy(id = "customers")
+	WebElement table;
+
+	@FindBy(xpath = "//*[@id=\"customers\"]/tbody/tr")
+	List<WebElement> raws;
+
+	@FindBy(xpath = "//*[@id=\"customers\"]/tbody/tr[1]/th")
+	List<WebElement> cols;
+
+	public void numOfRaws() {
+		System.out.println("Number of raws are : " + raws.size());
 	}
-	
-	public void numOfCals()
-	{
-		System.out.println("Number of cols are : " +cols.size());
+
+	public void numOfCals() {
+		System.out.println("Number of cols are : " + cols.size());
 	}
-	
-	public WebElement getValue(int raw, int col)
-	{
-		value = driver.findElement(By.xpath("//*[@id=\"customers\"]/tbody/tr["+(raw+1)+"]/td["+col+"]"));
-		
-		//*[@id="customers"]/tbody/tr[2]/td[3]
-		
+
+	public WebElement getValue(int raw, int col) {
+		value = driver.findElement(By.xpath("//*[@id=\"customers\"]/tbody/tr[" + (raw + 1) + "]/td[" + col + "]"));
+
+		// *[@id="customers"]/tbody/tr[2]/td[3]
+
 		return value;
 	}
-	
-	public void printValue(int raw, int col)
-	{
+
+	public void printValue(int raw, int col) {
 		value = getValue(raw, col);
-		
+
 		System.out.println(value.getText());
 	}
-	
-	public List<WebElement> getRaws()
-	{
+
+	public List<WebElement> getRaws() {
 		return raws;
 	}
-	
-	public WebElement getTable()
-	{
+
+	public WebElement getTable() {
 		return table;
 	}
-		
-	public String getTableCellText(WebElement table, int searchColumn,
-			String searchText, int returnColumntext) {
-		
-		String answer = "Could not find the value: "+searchText;
-		
+
+	public String getTableCellText(WebElement table, int searchColumn, String searchText, int returnColumntext) {
+
+		String answer = "Could not find the value: " + searchText;
+
 		List<WebElement> tableRaws = table.findElements(By.tagName("tr"));
-		
-		for(int i=1; i<tableRaws.size(); i++)
-		{
+
+		for (int i = 1; i < tableRaws.size(); i++) {
 			value = getValue(i, searchColumn);
-			
-			if (value.getText().equalsIgnoreCase(searchText))
-			{
+
+			if (value.getText().equalsIgnoreCase(searchText)) {
 				answer = getValue(i, returnColumntext).getText();
 				break;
 			}
 		}
 		return answer;
 	}
-	
-/*	public boolean verifyTableCellText(WebElement table, int searchColumn,
-			String searchText, int returnColumnText, String expectedText) {
+
+	public boolean verifyTableCellText(WebElement table, int searchColumn, String searchText, int returnColumnText,
+			String expectedText) {
 		
-	}
-	
-	public String getTableCellTextByXpath(WebElement table, int searchColumn,
-			String searchText, int returnColumnText) throws Exception {
+		String answer = getTableCellText(table, searchColumn, searchText, returnColumnText);
 		
+		if(answer.equalsIgnoreCase(expectedText))
+			return true;
+		else
+			return false;
+		
+
 	}
-*/
+
+	/*
+	 * public String getTableCellTextByXpath(WebElement table, int searchColumn,
+	 * String searchText, int returnColumnText) throws Exception {
+	 * 
+	 * }
+	 */
 }
