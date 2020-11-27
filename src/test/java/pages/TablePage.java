@@ -67,6 +67,8 @@ public class TablePage {
 	public String getTableCellText(WebElement table, int searchColumn,
 			String searchText, int returnColumntext) {
 		
+		String answer = "Could not find the value: "+searchText;
+		
 		List<WebElement> tableRaws = table.findElements(By.tagName("tr"));
 		
 		for(int i=1; i<tableRaws.size(); i++)
@@ -75,14 +77,11 @@ public class TablePage {
 			
 			if (value.getText().equalsIgnoreCase(searchText))
 			{
-				value = getValue(i, returnColumntext);
+				answer = getValue(i, returnColumntext).getText();
 				break;
 			}
-		}		
-		if (value.getText().equals(null))
-			return "Cound not find the value: "+searchText;
-		else
-		return value.getText();
+		}
+		return answer;
 	}
 	
 /*	public boolean verifyTableCellText(WebElement table, int searchColumn,

@@ -21,9 +21,9 @@ public class PrintTest extends TestBaseClass {
 		
 		tablePage.numOfCals();
 		
-		tablePage.printValue(5, 2);
+		tablePage.printValue(2, 2);
 		
-		System.out.println(tablePage.getTableCellText(tablePage.getTable(), 2, "Yoshi Tannamuri", 3));
+		System.out.println(tablePage.getTableCellText(tablePage.getTable(), 2, "Francisco Chang", 3));
 		
 		
 	}
