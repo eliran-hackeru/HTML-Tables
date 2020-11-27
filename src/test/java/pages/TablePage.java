@@ -22,6 +22,8 @@ public class TablePage {
 		this.driver=ldriver;
 	}
 	
+	@FindBy(id = "customers") WebElement table;
+	
 	@FindBy (xpath = "//*[@id=\"customers\"]/tbody/tr") List<WebElement> raws;
 	
 	@FindBy (xpath = "//*[@id=\"customers\"]/tbody/tr[1]/th") List<WebElement> cols;
@@ -56,11 +58,18 @@ public class TablePage {
 	{
 		return raws;
 	}
+	
+	public WebElement getTable()
+	{
+		return table;
+	}
 		
-	public String getTableCellText(List<WebElement> table, int searchColumn,
+	public String getTableCellText(WebElement table, int searchColumn,
 			String searchText, int returnColumntext) {
 		
-		for(int i=1; i<table.size(); i++)
+		List<WebElement> tableRaws = table.findElements(By.tagName("tr"));
+		
+		for(int i=1; i<tableRaws.size(); i++)
 		{
 			value = getValue(i, searchColumn);
 			
@@ -70,7 +79,9 @@ public class TablePage {
 				break;
 			}
 		}		
-		
+		if (value.getText().equals(null))
+			return "Cound not find the value: "+searchText;
+		else
 		return value.getText();
 	}
 	

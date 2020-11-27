@@ -23,7 +23,7 @@ public class PrintTest extends TestBaseClass {
 		
 		tablePage.printValue(5, 2);
 		
-		System.out.println(tablePage.getTableCellText(tablePage.getRaws(), 2, "Yoshi Tannamuri", 3));
+		System.out.println(tablePage.getTableCellText(tablePage.getTable(), 2, "Yoshi Tannamuri", 3));
 		
 		
 	}
