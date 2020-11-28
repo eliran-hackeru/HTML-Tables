@@ -18,6 +18,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
 			
+			System.out.println("Starting: "+testName);
+			
 			tablePage.assertTitle();
 			
 			Helper.captureScreenshot(driver, testName, "01_Browser_Started");
@@ -47,6 +49,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			}
 			
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 	
 	@Test(priority = 1)
@@ -57,6 +61,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			extentTest = extent.createTest(testName);
 			
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
+			
+			System.out.println("Starting: "+testName);
 			
 			tablePage.assertTitle();
 			
@@ -87,6 +93,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			}
 			
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 	
 	@Test(priority = 2)
@@ -97,6 +105,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			extentTest = extent.createTest(testName);
 			
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
+			
+			System.out.println("Starting: "+testName);
 			
 			tablePage.assertTitle();
 			
@@ -127,6 +137,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			}
 			
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 	
 	@Test(priority = 3)
@@ -137,6 +149,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			extentTest = extent.createTest(testName);
 			
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
+			
+			System.out.println("Starting: "+testName);
 			
 			tablePage.assertTitle();
 			
@@ -167,6 +181,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			}
 			
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 	
 	@Test(priority = 4)
@@ -177,6 +193,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			extentTest = extent.createTest(testName);
 		
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
+			
+			System.out.println("Starting: "+testName);
 		
 			tablePage.assertTitle();
 		
@@ -207,6 +225,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			}
 		
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 	
 	@Test(priority = 5)
@@ -217,6 +237,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			extentTest = extent.createTest(testName);
 		
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
+			
+			System.out.println("Starting: "+testName);
 		
 			tablePage.assertTitle();
 		
@@ -247,6 +269,8 @@ public class VerifyTableCellTextTest extends TestBaseClass {
 			}
 		
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 
 }
