@@ -1,17 +1,11 @@
 package pages;
 
 import java.util.List;
-
-import javax.xml.xpath.XPath;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
-
-import utility.Helper;
 
 public class TablePage {
 
@@ -104,8 +98,9 @@ public class TablePage {
 		else
 			return false;
 	}
-	
-	// Uses getCellText(), which uses getCell, which uses the xpath to get the cell text
+
+	// Uses getCellText(), which uses getCell, which uses the xpath to get the text
+	// value of the cell
 	// Doesn't work with switch-case though
 	public String getTableCellTextByXpath(WebElement table, int searchColumn, String searchText, int returnColumnText)
 			throws Exception {
