@@ -28,7 +28,7 @@ public class GetTableCellTextTest extends TestBaseClass {
 			{
 				String data[] = Helper.getArrayData(excel, "Contact", (i+1), 1); // TestData/Data.xlsx
 				
-				String answer = tablePage.getTableCellText(tablePage.getTable(), 2, data[0] , 3);
+				String answer = tablePage.getTableCellText(tablePage.getTable(), 2, data[0], 3);
 				
 				extentTest.createNode(answer);
 				

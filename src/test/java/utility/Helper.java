@@ -91,6 +91,13 @@ public class Helper {
 		return data;
 	}
 	
+	public static String getData(ExcelDataProvider excel, String sheetName, int row, int col)
+	{
+		String data = excel.getStringData(sheetName, row, col);
+		
+		return data;
+	}
+	
 	public static String getTheFirstString(ExcelDataProvider excel, String sheetName) // row & col = 0
 	{
 		String data = excel.getStringData(sheetName, 0, 0);
