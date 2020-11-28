@@ -83,10 +83,10 @@ public class Helper {
 	
 	public static String[] getArrayData(ExcelDataProvider excel, String sheetName, int row, int col)
 	{
-		String data[] = new String[row];
-		for (int i=0; i<row; i++)
+		String data[] = new String[col];
+		for (int i=0; i<col; i++)
 		{
-			data[i]=excel.getStringData(sheetName, i, col);
+			data[i]=excel.getStringData(sheetName, row, i);
 		}
 		return data;
 	}

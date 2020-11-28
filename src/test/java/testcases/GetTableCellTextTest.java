@@ -22,9 +22,11 @@ public class GetTableCellTextTest extends TestBaseClass {
 			
 			Helper.captureScreenshot(driver, testName, "01_Browser_Started");
 			
-			String data[] = Helper.getArrayData(excel, "AllTable", 1, 1); // TestData/Data.xlsx
+//			int rows = 
 			
-			String answer = tablePage.getTableCellText(tablePage.getTable(), 1, data[0] , 3);
+			String data[] = Helper.getArrayData(excel, "Contact", 1, 1); // TestData/Data.xlsx
+			
+			String answer = tablePage.getTableCellText(tablePage.getTable(), 2, data[0] , 3);
 			
 			extentTest.createNode(answer);
 			
