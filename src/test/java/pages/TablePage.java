@@ -104,7 +104,9 @@ public class TablePage {
 		else
 			return false;
 	}
-
+	
+	// Uses getCellText(), which uses getCell, which uses the xpath to get the cell text
+	// Doesn't work with switch-case though
 	public String getTableCellTextByXpath(WebElement table, int searchColumn, String searchText, int returnColumnText)
 			throws Exception {
 

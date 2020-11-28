@@ -2,122 +2,122 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-28T21:40:14 IST" name="Default suite" finished-at="2020-11-28T21:40:51 IST" duration-ms="37066">
+  <suite started-at="2020-11-28T21:53:51 IST" name="Default suite" finished-at="2020-11-28T21:54:21 IST" duration-ms="30685">
     <groups>
     </groups>
-    <test started-at="2020-11-28T21:40:14 IST" name="Default test" finished-at="2020-11-28T21:40:51 IST" duration-ms="37066">
-      <class name="testcases.VerifyTableCellTextTest">
-        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:13 IST" name="setUpSuite" finished-at="2020-11-28T21:40:14 IST" duration-ms="591" status="PASS">
+    <test started-at="2020-11-28T21:53:51 IST" name="Default test" finished-at="2020-11-28T21:54:21 IST" duration-ms="30685">
+      <class name="testcases.GetTableCellTextByXpathTest">
+        <test-method is-config="true" signature="setUpSuite()[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:53:50 IST" name="setUpSuite" finished-at="2020-11-28T21:53:51 IST" duration-ms="643" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpSuite -->
-        <test-method is-config="true" signature="seExtent()[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:14 IST" name="seExtent" finished-at="2020-11-28T21:40:14 IST" duration-ms="119" status="PASS">
+        <test-method is-config="true" signature="seExtent()[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:53:51 IST" name="seExtent" finished-at="2020-11-28T21:53:51 IST" duration-ms="129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- seExtent -->
-        <test-method is-config="true" signature="setupApplication()[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:14 IST" name="setupApplication" finished-at="2020-11-28T21:40:24 IST" duration-ms="9776" status="PASS">
+        <test-method is-config="true" signature="setupApplication()[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:53:51 IST" name="setupApplication" finished-at="2020-11-28T21:54:00 IST" duration-ms="9020" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupApplication -->
-        <test-method signature="VerifyCompanyGetContactApp()[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:24 IST" name="VerifyCompanyGetContactApp" finished-at="2020-11-28T21:40:28 IST" duration-ms="4274" status="PASS">
+        <test-method signature="InsertCompanyGetContactApp()[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:00 IST" name="InsertCompanyGetContactApp" finished-at="2020-11-28T21:54:04 IST" duration-ms="4113" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyCompanyGetContactApp -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:28 IST" name="tearDownMethod" finished-at="2020-11-28T21:40:28 IST" duration-ms="10" status="PASS">
+        </test-method> <!-- InsertCompanyGetContactApp -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:04 IST" name="tearDownMethod" finished-at="2020-11-28T21:54:04 IST" duration-ms="12" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=VerifyCompanyGetContactApp status=SUCCESS method=VerifyTableCellTextTest.VerifyCompanyGetContactApp()[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887] output={null}]]]>
+                <![CDATA[[TestResult name=InsertCompanyGetContactApp status=SUCCESS method=GetTableCellTextByXpathTest.InsertCompanyGetContactApp()[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method signature="VerifyCompanyGetCountryApp()[pri:1, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:28 IST" name="VerifyCompanyGetCountryApp" finished-at="2020-11-28T21:40:32 IST" duration-ms="3617" status="PASS">
+        <test-method signature="InsertCompanyGetCountryApp()[pri:1, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:04 IST" name="InsertCompanyGetCountryApp" finished-at="2020-11-28T21:54:06 IST" duration-ms="2507" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyCompanyGetCountryApp -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:32 IST" name="tearDownMethod" finished-at="2020-11-28T21:40:32 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- InsertCompanyGetCountryApp -->
+        <test-method signature="InsertContactGetCompanyApp()[pri:2, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:06 IST" name="InsertContactGetCompanyApp" finished-at="2020-11-28T21:54:09 IST" duration-ms="3004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InsertContactGetCompanyApp -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:06 IST" name="tearDownMethod" finished-at="2020-11-28T21:54:06 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=VerifyCompanyGetCountryApp status=SUCCESS method=VerifyTableCellTextTest.VerifyCompanyGetCountryApp()[pri:1, instance:testcases.VerifyTableCellTextTest@671a5887] output={null}]]]>
+                <![CDATA[[TestResult name=InsertCompanyGetCountryApp status=SUCCESS method=GetTableCellTextByXpathTest.InsertCompanyGetCountryApp()[pri:1, instance:testcases.GetTableCellTextByXpathTest@671a5887] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method signature="VerifyContactGetCompanyApp()[pri:2, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:32 IST" name="VerifyContactGetCompanyApp" finished-at="2020-11-28T21:40:36 IST" duration-ms="4196" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyContactGetCompanyApp -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:36 IST" name="tearDownMethod" finished-at="2020-11-28T21:40:36 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:09 IST" name="tearDownMethod" finished-at="2020-11-28T21:54:09 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=VerifyContactGetCompanyApp status=SUCCESS method=VerifyTableCellTextTest.VerifyContactGetCompanyApp()[pri:2, instance:testcases.VerifyTableCellTextTest@671a5887] output={null}]]]>
+                <![CDATA[[TestResult name=InsertContactGetCompanyApp status=SUCCESS method=GetTableCellTextByXpathTest.InsertContactGetCompanyApp()[pri:2, instance:testcases.GetTableCellTextByXpathTest@671a5887] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method signature="VerifyContactGetCountryApp()[pri:3, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:36 IST" name="VerifyContactGetCountryApp" finished-at="2020-11-28T21:40:40 IST" duration-ms="4566" status="PASS">
+        <test-method signature="InsertContactGetCountryApp()[pri:3, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:09 IST" name="InsertContactGetCountryApp" finished-at="2020-11-28T21:54:13 IST" duration-ms="3494" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyContactGetCountryApp -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:40 IST" name="tearDownMethod" finished-at="2020-11-28T21:40:40 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- InsertContactGetCountryApp -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:13 IST" name="tearDownMethod" finished-at="2020-11-28T21:54:13 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=VerifyContactGetCountryApp status=SUCCESS method=VerifyTableCellTextTest.VerifyContactGetCountryApp()[pri:3, instance:testcases.VerifyTableCellTextTest@671a5887] output={null}]]]>
+                <![CDATA[[TestResult name=InsertContactGetCountryApp status=SUCCESS method=GetTableCellTextByXpathTest.InsertContactGetCountryApp()[pri:3, instance:testcases.GetTableCellTextByXpathTest@671a5887] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method signature="VerifyCountryGetCompanyApp()[pri:4, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:40 IST" name="VerifyCountryGetCompanyApp" finished-at="2020-11-28T21:40:45 IST" duration-ms="4575" status="PASS">
+        <test-method signature="InsertCountryGetCompanyApp()[pri:4, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:13 IST" name="InsertCountryGetCompanyApp" finished-at="2020-11-28T21:54:17 IST" duration-ms="3574" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyCountryGetCompanyApp -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:45 IST" name="tearDownMethod" finished-at="2020-11-28T21:40:45 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- InsertCountryGetCompanyApp -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:17 IST" name="tearDownMethod" finished-at="2020-11-28T21:54:17 IST" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=VerifyCountryGetCompanyApp status=SUCCESS method=VerifyTableCellTextTest.VerifyCountryGetCompanyApp()[pri:4, instance:testcases.VerifyTableCellTextTest@671a5887] output={null}]]]>
+                <![CDATA[[TestResult name=InsertCountryGetCompanyApp status=SUCCESS method=GetTableCellTextByXpathTest.InsertCountryGetCompanyApp()[pri:4, instance:testcases.GetTableCellTextByXpathTest@671a5887] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method signature="VerifyCountryGetContactApp()[pri:5, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:45 IST" name="VerifyCountryGetContactApp" finished-at="2020-11-28T21:40:49 IST" duration-ms="4373" status="PASS">
+        <test-method signature="InsertCountryGetContactApp()[pri:5, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:17 IST" name="InsertCountryGetContactApp" finished-at="2020-11-28T21:54:20 IST" duration-ms="3740" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyCountryGetContactApp -->
-        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:49 IST" name="tearDownMethod" finished-at="2020-11-28T21:40:49 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- InsertCountryGetContactApp -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:20 IST" name="tearDownMethod" finished-at="2020-11-28T21:54:20 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=VerifyCountryGetContactApp status=SUCCESS method=VerifyTableCellTextTest.VerifyCountryGetContactApp()[pri:5, instance:testcases.VerifyTableCellTextTest@671a5887] output={null}]]]>
+                <![CDATA[[TestResult name=InsertCountryGetContactApp status=SUCCESS method=GetTableCellTextByXpathTest.InsertCountryGetContactApp()[pri:5, instance:testcases.GetTableCellTextByXpathTest@671a5887] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:49 IST" name="tearDown" finished-at="2020-11-28T21:40:50 IST" duration-ms="724" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:20 IST" name="tearDown" finished-at="2020-11-28T21:54:21 IST" duration-ms="716" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:testcases.VerifyTableCellTextTest@671a5887]" started-at="2020-11-28T21:40:50 IST" name="endReport" finished-at="2020-11-28T21:40:51 IST" duration-ms="742" status="PASS">
+        <test-method is-config="true" signature="endReport()[pri:0, instance:testcases.GetTableCellTextByXpathTest@671a5887]" started-at="2020-11-28T21:54:21 IST" name="endReport" finished-at="2020-11-28T21:54:21 IST" duration-ms="323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- testcases.VerifyTableCellTextTest -->
+      </class> <!-- testcases.GetTableCellTextByXpathTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
