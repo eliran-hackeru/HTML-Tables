@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.PrintTest">
+      <class name="testcases.GetTableCellTextTest">
         <methods>
           <include name="setUpSuite"/>
-          <include name="PrintApp"/>
           <include name="seExtent"/>
           <include name="endReport"/>
           <include name="tearDown"/>
+          <include name="GetTableCellTextApp"/>
           <include name="tearDownMethod"/>
           <include name="setupApplication"/>
         </methods>
-      </class> <!-- testcases.PrintTest -->
+      </class> <!-- testcases.GetTableCellTextTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

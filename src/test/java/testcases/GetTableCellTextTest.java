@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.support.PageFactory;
 import testcases.TestBaseClass;
 import pages.TablePage;
+import utility.ExcelDataProvider;
 import utility.Helper;
 
 public class GetTableCellTextTest extends TestBaseClass {
@@ -21,7 +22,9 @@ public class GetTableCellTextTest extends TestBaseClass {
 			
 			Helper.captureScreenshot(driver, testName, "01_Browser_Started");
 			
-			String answer = tablePage.getTableCellText(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3);
+			String data[] = Helper.getArrayData(excel, "AllTable", 1, 1); //The Excel file is located in the TestData folder under Data.xlsx
+			
+			String answer = tablePage.getTableCellText(tablePage.getTable(), 1, data[0] , 3);
 			
 			extentTest.createNode(answer);
 			

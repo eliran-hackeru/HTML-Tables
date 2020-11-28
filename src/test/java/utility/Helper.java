@@ -81,7 +81,7 @@ public class Helper {
 		js.executeScript("window.scrollBy(0,5000)");
 	}
 	
-	public static String[] excelString(ExcelDataProvider excel, String sheetName, int row, int col)
+	public static String[] getArrayData(ExcelDataProvider excel, String sheetName, int row, int col)
 	{
 		String data[] = new String[col];
 		for (int i=0; i<col; i++)

@@ -29,12 +29,12 @@ public class PrintTest extends TestBaseClass {
 		
 		tablePage.printNumOfCals();
 		
-		tablePage.printCell(5, 1);
+		tablePage.printCell(1, 1);
 		
-		System.out.println(tablePage.getTableCellText(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3));
+		System.out.println(tablePage.getTableCellText(tablePage.getTable(), 1, "Alfreds Futterkiste", 2));
 		
-		System.out.println(tablePage.verifyTableCellText(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3, "Canada"));
+		System.out.println(tablePage.verifyTableCellText(tablePage.getTable(), 1, "Alfreds Futterkiste", 2, "Maria Anders"));
 
-		System.out.println(tablePage.getTableCellTextByXpath(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3));
+		System.out.println(tablePage.getTableCellTextByXpath(tablePage.getTable(), 1, "Alfreds Futterkiste", 2));
 	}
 }
