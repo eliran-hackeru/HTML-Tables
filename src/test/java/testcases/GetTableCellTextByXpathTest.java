@@ -1,6 +1,12 @@
 package testcases;
 
 import org.testng.annotations.Test;
+
+/*
+ * This test is similar to GetTableCellTextTest,
+ * but it uses getTableCellTextByXpath() instead of getTableCellText()
+ */
+
 import org.openqa.selenium.support.PageFactory;
 import testcases.TestBaseClass;
 import pages.TablePage;

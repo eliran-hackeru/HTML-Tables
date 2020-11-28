@@ -138,7 +138,7 @@ public class TablePage {
 		return answer;
 	}
 
-	// To assert the title, which will be changed according to the language
+	// To assert the title "HTML Tables"
 	public void assertTitle() {
 		Assert.assertTrue(driver.getTitle().contains("HTML Tables"));
 		System.out.println("Assert Title passed");
