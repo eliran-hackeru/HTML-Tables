@@ -22,7 +22,7 @@ public class GetTableCellTextTest extends TestBaseClass {
 			
 			Helper.captureScreenshot(driver, testName, "01_Browser_Started");
 			
-			String data[] = Helper.getArrayData(excel, "AllTable", 1, 1); //The Excel file is located in the TestData folder under Data.xlsx
+			String data[] = Helper.getArrayData(excel, "AllTable", 1, 1); // TestData/Data.xlsx
 			
 			String answer = tablePage.getTableCellText(tablePage.getTable(), 1, data[0] , 3);
 			

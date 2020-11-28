@@ -25,7 +25,7 @@ public class PrintTest extends TestBaseClass {
 		
 		Helper.captureScreenshot(driver, testName, "01_Browser_Started");
 		
-*/		tablePage.printNumOfRaws();
+*/		tablePage.printNumOfRows();
 		
 		tablePage.printNumOfCals();
 		

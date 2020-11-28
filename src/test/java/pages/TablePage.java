@@ -25,14 +25,14 @@ public class TablePage {
 	WebElement table;
 
 	@FindBy(xpath = "//*[@id=\"customers\"]/tbody/tr")
-	List<WebElement> raws;
+	List<WebElement> rows;
 
 	@FindBy(xpath = "//*[@id=\"customers\"]/tbody/tr[1]/th")
 	List<WebElement> cols;
 
-	// Prints the number of raws
-	public void printNumOfRaws() {
-		System.out.println("Number of raws are : " + raws.size());
+	// Prints the number of rows
+	public void printNumOfRows() {
+		System.out.println("Number of rows are : " + rows.size());
 	}
 
 	// Prints the number of columns
@@ -40,23 +40,23 @@ public class TablePage {
 		System.out.println("Number of cols are : " + cols.size());
 	}
 
-	// Returns the cell as a WebElemnt using xpath, adds 1 to raw to avoid the table
+	// Returns the cell as a WebElemnt using xpath, adds 1 to row to avoid the table
 	// headers
-	public WebElement getCell(int raw, int col) {
-		cell = driver.findElement(By.xpath("//*[@id=\"customers\"]/tbody/tr[" + (raw + 1) + "]/td[" + col + "]"));
+	public WebElement getCell(int row, int col) {
+		cell = driver.findElement(By.xpath("//*[@id=\"customers\"]/tbody/tr[" + (row + 1) + "]/td[" + col + "]"));
 		return cell;
 	}
 
 	// Prints the text content of the cell
-	public void printCell(int raw, int col) {
-		cell = getCell(raw, col);
+	public void printCell(int row, int col) {
+		cell = getCell(row, col);
 
 		System.out.println(cell.getText());
 	}
 
-	// Returns raws a List<WebElement>
-	public List<WebElement> getRaws() {
-		return raws;
+	// Returns rows a List<WebElement>
+	public List<WebElement> getRows() {
+		return rows;
 	}
 
 	// Returns table as a WebElement
@@ -65,8 +65,8 @@ public class TablePage {
 	}
 
 	// Gets the text inside the cell
-	public String getCellText(int raw, int col) {
-		cell = getCell(raw, col);
+	public String getCellText(int row, int col) {
+		cell = getCell(row, col);
 
 		return cell.getText();
 	}
@@ -77,9 +77,9 @@ public class TablePage {
 
 		String answer = "Could not find the value: " + searchText + " at column " + searchColumn;// In case of a failure
 
-		List<WebElement> tableRaws = table.findElements(By.tagName("tr"));// Use the table to get the raws
+		List<WebElement> tableRows = table.findElements(By.tagName("tr"));// Use the table to get the rows
 
-		for (int i = 1; i < tableRaws.size(); i++) {
+		for (int i = 1; i < tableRows.size(); i++) {
 			cell = getCell(i, searchColumn);// For comparison
 
 			if (cell.getText().equalsIgnoreCase(searchText)) {
