@@ -18,6 +18,8 @@ public class GetTableCellTextTest extends TestBaseClass {
 			
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
 			
+			System.out.println("Starting: "+testName);
+			
 			tablePage.assertTitle();
 			
 			Helper.captureScreenshot(driver, testName, "01_Browser_Started");
@@ -45,6 +47,8 @@ public class GetTableCellTextTest extends TestBaseClass {
 			}
 			
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 	
 	@Test(priority = 1)
@@ -55,6 +59,8 @@ public class GetTableCellTextTest extends TestBaseClass {
 			extentTest = extent.createTest(testName);
 			
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
+			
+			System.out.println("Starting: "+testName);
 			
 			tablePage.assertTitle();
 			
@@ -83,6 +89,8 @@ public class GetTableCellTextTest extends TestBaseClass {
 			}
 			
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 	
 	@Test(priority = 2)
@@ -93,6 +101,8 @@ public class GetTableCellTextTest extends TestBaseClass {
 			extentTest = extent.createTest(testName);
 			
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
+			
+			System.out.println("Starting: "+testName);
 			
 			tablePage.assertTitle();
 			
@@ -121,6 +131,8 @@ public class GetTableCellTextTest extends TestBaseClass {
 			}
 			
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 	
 	@Test(priority = 3)
@@ -131,6 +143,8 @@ public class GetTableCellTextTest extends TestBaseClass {
 			extentTest = extent.createTest(testName);
 			
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
+			
+			System.out.println("Starting: "+testName);
 			
 			tablePage.assertTitle();
 			
@@ -159,44 +173,50 @@ public class GetTableCellTextTest extends TestBaseClass {
 			}
 			
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 	
 	@Test(priority = 4)
 	public void InsertCountryGetCompanyApp() throws Exception {
 			
-		String testName = new Throwable().getStackTrace()[0].getMethodName();
+			String testName = new Throwable().getStackTrace()[0].getMethodName();
 
-		extentTest = extent.createTest(testName);
+			extentTest = extent.createTest(testName);
 		
-		TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
-		
-		tablePage.assertTitle();
-		
-		Helper.captureScreenshot(driver, testName, "01_Browser_Started");
-		
-		int totalRows = ExcelDataProvider.rowCounter("Country");
-		
-		for (int i=0; i<totalRows; i++)
-		{
-			String data[] = Helper.getArrayData(excel, "Country", (i+1), 1); // TestData/Data.xlsx
+			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
 			
-			String answer = tablePage.getTableCellText(tablePage.getTable(), 3, data[0], 1);
-			
-			if (answer.contains("Could not find the value"))
-			{
-				extentTest.createNode(answer);
-				
-				System.out.println(answer);
-			}
-			else
-			{
-				extentTest.createNode("The Company of "+data[0]+" is: "+answer);
-				
-				System.out.println("The Company of "+data[0]+" is: "+answer);
-			}
-		}
+			System.out.println("Starting: "+testName);
 		
-		Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			tablePage.assertTitle();
+		
+			Helper.captureScreenshot(driver, testName, "01_Browser_Started");
+		
+			int totalRows = ExcelDataProvider.rowCounter("Country");
+		
+			for (int i=0; i<totalRows; i++)
+			{
+				String data[] = Helper.getArrayData(excel, "Country", (i+1), 1); // TestData/Data.xlsx
+			
+				String answer = tablePage.getTableCellText(tablePage.getTable(), 3, data[0], 1);
+			
+				if (answer.contains("Could not find the value"))
+				{
+					extentTest.createNode(answer);
+				
+					System.out.println(answer);
+				}
+				else
+				{
+					extentTest.createNode("The Company of "+data[0]+" is: "+answer);
+				
+					System.out.println("The Company of "+data[0]+" is: "+answer);
+				}
+			}
+	
+			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 	}
 	
 	@Test(priority = 5)
@@ -207,6 +227,8 @@ public class GetTableCellTextTest extends TestBaseClass {
 			extentTest = extent.createTest(testName);
 			
 			TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
+			
+			System.out.println("Starting: "+testName);
 			
 			tablePage.assertTitle();
 			
@@ -235,5 +257,7 @@ public class GetTableCellTextTest extends TestBaseClass {
 			}
 			
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
+			
+			System.out.println("Ending: "+testName +"\n");
 		}
 }

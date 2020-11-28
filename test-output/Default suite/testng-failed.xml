@@ -5,13 +5,16 @@
     <classes>
       <class name="testcases.GetTableCellTextTest">
         <methods>
+          <include name="InsertCountryGetCompanyApp"/>
           <include name="setUpSuite"/>
           <include name="seExtent"/>
           <include name="endReport"/>
+          <include name="InsertContactGetCompanyApp"/>
           <include name="tearDown"/>
-          <include name="GetTableCellTextApp"/>
           <include name="tearDownMethod"/>
           <include name="setupApplication"/>
+          <include name="InsertCountryGetContactApp"/>
+          <include name="InsertContactGetCountryApp"/>
         </methods>
       </class> <!-- testcases.GetTableCellTextTest -->
     </classes>
