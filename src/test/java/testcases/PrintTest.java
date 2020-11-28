@@ -21,7 +21,7 @@ public class PrintTest extends TestBaseClass {
 		
 		tablePage.numOfCals();
 		
-		tablePage.printValue(5, 1);
+		tablePage.printCell(5, 1);
 		
 		System.out.println(tablePage.getTableCellText(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3));
 		

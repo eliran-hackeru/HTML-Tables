@@ -15,7 +15,7 @@ public class TablePage {
 
 	WebDriver driver;
 
-	private WebElement value; //For getting the value inside the cell and for other methods
+	private WebElement cell; //For getting the cell and for other methods
 
 	public TablePage(WebDriver ldriver) {
 		this.driver = ldriver;
@@ -40,17 +40,17 @@ public class TablePage {
 		System.out.println("Number of cols are : " + cols.size());
 	}
 
-	//Returns the value as a WebElemnt using xpath, adds 1 to raw to avoid the table headers
-	public WebElement getValue(int raw, int col) {
-		value = driver.findElement(By.xpath("//*[@id=\"customers\"]/tbody/tr[" + (raw + 1) + "]/td[" + col + "]"));
-		return value;
+	//Returns the cell as a WebElemnt using xpath, adds 1 to raw to avoid the table headers
+	public WebElement getCell(int raw, int col) {
+		cell = driver.findElement(By.xpath("//*[@id=\"customers\"]/tbody/tr[" + (raw + 1) + "]/td[" + col + "]"));
+		return cell;
 	}
 
 	//Prints the text content of the value
-	public void printValue(int raw, int col) {
-		value = getValue(raw, col);
+	public void printCell(int raw, int col) {
+		cell = getCell(raw, col);
 
-		System.out.println(value.getText());
+		System.out.println(cell.getText());
 	}
 
 	//Returns raws a List<WebElement>
@@ -62,6 +62,12 @@ public class TablePage {
 	public WebElement getTable() {
 		return table;
 	}
+	
+	// Gets the text inside the cell
+	public String getCellText(int raw, int col) {
+		
+		return cell.getText();
+	}
 
 	//Searches for text in the table by column number and returns the parallel text from another column
 	public String getTableCellText(WebElement table, int searchColumn, String searchText, int returnColumntext) {
@@ -71,10 +77,10 @@ public class TablePage {
 		List<WebElement> tableRaws = table.findElements(By.tagName("tr"));//Use the table to get the raws
 
 		for (int i = 1; i < tableRaws.size(); i++) {
-			value = getValue(i, searchColumn);//For comparison
+			cell = getCell(i, searchColumn);//For comparison
 
-			if (value.getText().equalsIgnoreCase(searchText)) {
-				answer = getValue(i, returnColumntext).getText();
+			if (cell.getText().equalsIgnoreCase(searchText)) {
+				answer = getCell(i, returnColumntext).getText();
 				break;
 			}
 		}
@@ -95,10 +101,22 @@ public class TablePage {
 
 	}
 
-	/*
-	 * public String getTableCellTextByXpath(WebElement table, int searchColumn,
-	 * String searchText, int returnColumnText) throws Exception {
-	 * 
-	 * }
-	 */
+	
+	 public String getTableCellTextByXpath(WebElement table, int searchColumn,
+	 String searchText, int returnColumnText) throws Exception {
+		 
+		 String answer = "Could not find the value: " + searchText;//In case of failure
+		 
+		 
+		 
+		 switch (cell.getText())
+		 {
+		 case getCellText(1, searchColumn).
+		 }
+		 
+		 getCell(1, searchColumn);
+		 
+		 return answer;
+	 
+	 }	 
 }
