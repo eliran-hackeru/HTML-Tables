@@ -9,7 +9,7 @@ import utility.Helper;
 public class PrintTest extends TestBaseClass {
 
 	@Test(priority = 0)
-	public void PrintApp() {
+	public void PrintApp() throws Exception {
 		
 		String testName = new Throwable().getStackTrace()[0].getMethodName();
 
@@ -26,6 +26,11 @@ public class PrintTest extends TestBaseClass {
 		System.out.println(tablePage.getTableCellText(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3));
 		
 		System.out.println(tablePage.verifyTableCellText(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3, "Canada"));
+
+		System.out.println(tablePage.getTableCellTextByXpath(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3));
+		
+		
+		
 	}
 
 }
