@@ -31,12 +31,12 @@ public class TablePage {
 	List<WebElement> cols;
 
 	// Prints the number of raws
-	public void numOfRaws() {
+	public void printNumOfRaws() {
 		System.out.println("Number of raws are : " + raws.size());
 	}
 
 	// Prints the number of columns
-	public void numOfCals() {
+	public void printNumOfCals() {
 		System.out.println("Number of cols are : " + cols.size());
 	}
 
@@ -110,7 +110,7 @@ public class TablePage {
 
 		if (getCellText(1, searchColumn).equalsIgnoreCase(searchText)) {
 			answer = getCellText(1, returnColumnText);
-			
+
 		} else if (getCellText(2, searchColumn).equalsIgnoreCase(searchText)) {
 			answer = getCellText(2, returnColumnText);
 		}
@@ -132,5 +132,11 @@ public class TablePage {
 		}
 
 		return answer;
+	}
+
+	// To assert the title, which will be changed according to the language
+	public void assertTitle() {
+		Assert.assertTrue(driver.getTitle().contains("HTML Tables"));
+		System.out.println("Assert Title passed");
 	}
 }

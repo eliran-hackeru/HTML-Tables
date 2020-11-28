@@ -6,6 +6,10 @@ import testcases.TestBaseClass;
 import pages.TablePage;
 import utility.Helper;
 
+/*
+ * This class is for testing the results of the methods by printing them to the console 
+ */
+
 public class PrintTest extends TestBaseClass {
 
 	@Test(priority = 0)
@@ -17,9 +21,13 @@ public class PrintTest extends TestBaseClass {
 		
 		TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
 		
-		tablePage.numOfRaws();
+/*		tablePage.assertTitle();
 		
-		tablePage.numOfCals();
+		Helper.captureScreenshot(driver, testName, "01_Browser_Started");
+		
+*/		tablePage.printNumOfRaws();
+		
+		tablePage.printNumOfCals();
 		
 		tablePage.printCell(5, 1);
 		
@@ -28,9 +36,5 @@ public class PrintTest extends TestBaseClass {
 		System.out.println(tablePage.verifyTableCellText(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3, "Canada"));
 
 		System.out.println(tablePage.getTableCellTextByXpath(tablePage.getTable(), 1, "Laughing Bacchus Winecellars", 3));
-		
-		
-		
 	}
-
 }

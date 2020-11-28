@@ -32,7 +32,7 @@ public class TestBaseClass {
 	public ExtentTest extentTest;
 
 	@BeforeSuite
-	public void setUpSuite() {
+	public void setUpSuite() throws IOException {
 		excel = new ExcelDataProvider();
 		config = new ConfigDataProvider();
 	}
