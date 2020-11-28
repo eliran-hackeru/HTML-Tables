@@ -21,11 +21,7 @@ public class PrintTest extends TestBaseClass {
 		
 		TablePage tablePage = PageFactory.initElements(driver, TablePage.class);
 		
-/*		tablePage.assertTitle();
-		
-		Helper.captureScreenshot(driver, testName, "01_Browser_Started");
-		
-*/		tablePage.printNumOfRows();
+		tablePage.printNumOfRows();
 		
 		tablePage.printNumOfCals();
 		
