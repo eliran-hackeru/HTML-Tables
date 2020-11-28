@@ -7,7 +7,7 @@ import java.text.NumberFormat;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelDataProvider {
-	XSSFWorkbook wb;
+	static XSSFWorkbook wb;
 
 	public ExcelDataProvider() throws IOException {
 		try {
@@ -46,7 +46,7 @@ public class ExcelDataProvider {
 	}
 
 	// Counts the number of rows with data in the excel file
-	public int rowCounter(String sheetName) throws IOException {
+	public static int rowCounter(String sheetName) throws IOException {
 		int value = wb.getSheet(sheetName).getLastRowNum() - wb.getSheet(sheetName).getFirstRowNum();
 		return value;
 	}

@@ -22,15 +22,18 @@ public class GetTableCellTextTest extends TestBaseClass {
 			
 			Helper.captureScreenshot(driver, testName, "01_Browser_Started");
 			
-//			int rows = 
+			int totalRows = ExcelDataProvider.rowCounter("Contact");
 			
-			String data[] = Helper.getArrayData(excel, "Contact", 1, 1); // TestData/Data.xlsx
-			
-			String answer = tablePage.getTableCellText(tablePage.getTable(), 2, data[0] , 3);
-			
-			extentTest.createNode(answer);
-			
-			System.out.println(answer);
+			for (int i=0; i<totalRows; i++)
+			{
+				String data[] = Helper.getArrayData(excel, "Contact", (i+1), 1); // TestData/Data.xlsx
+				
+				String answer = tablePage.getTableCellText(tablePage.getTable(), 2, data[0] , 3);
+				
+				extentTest.createNode(answer);
+				
+				System.out.println(answer);
+			}
 			
 			Helper.captureScreenshot(driver, testName, "02_Test_Completed");
 	}
