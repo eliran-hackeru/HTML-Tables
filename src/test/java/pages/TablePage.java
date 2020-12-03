@@ -5,7 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import utility.Helper;
 
 public class TablePage {
 
@@ -106,31 +109,29 @@ public class TablePage {
 			throws Exception {
 
 		String answer = "Could not find the value: " + searchText + " at column " + searchColumn;// In case of a failure
-
-		if (getCellText(1, searchColumn).equalsIgnoreCase(searchText)) {
-			answer = getCellText(1, returnColumnText);
-
-		} else if (getCellText(2, searchColumn).equalsIgnoreCase(searchText)) {
-			answer = getCellText(2, returnColumnText);
+		
+		String xpath = "//td[contains(text(),'" + searchText +"')]";
+		
+		boolean exists = driver.getPageSource().contains(searchText);
+		
+		if (exists)
+		{
+			cell = table.findElement(By.xpath(xpath));
+			
+			WebElement cellRow = cell.findElement(By.xpath("ancestor::tr[1]"));
+			
+			int rowNum = rows.indexOf(cellRow);
+			
+			answer = getCellText(rowNum, returnColumnText);
+			
+			return answer;
 		}
-
-		else if (getCellText(3, searchColumn).equalsIgnoreCase(searchText)) {
-			answer = getCellText(3, returnColumnText);
+				
+		else
+		{
+			return answer;
 		}
-
-		else if (getCellText(4, searchColumn).equalsIgnoreCase(searchText)) {
-			answer = getCellText(4, returnColumnText);
-		}
-
-		else if (getCellText(5, searchColumn).equalsIgnoreCase(searchText)) {
-			answer = getCellText(5, returnColumnText);
-		}
-
-		else if (getCellText(6, searchColumn).equalsIgnoreCase(searchText)) {
-			answer = getCellText(6, returnColumnText);
-		}
-
-		return answer;
+		
 	}
 
 	// To assert the title "HTML Tables"

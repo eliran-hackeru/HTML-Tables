@@ -3,20 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.GetTableCellTextTest">
+      <class name="testcases.GetTableCellTextByXpathTest">
         <methods>
-          <include name="InsertCountryGetCompanyApp"/>
+          <include name="InsertCompanyGetContactApp"/>
           <include name="setUpSuite"/>
           <include name="seExtent"/>
           <include name="endReport"/>
-          <include name="InsertContactGetCompanyApp"/>
           <include name="tearDown"/>
           <include name="tearDownMethod"/>
           <include name="setupApplication"/>
-          <include name="InsertCountryGetContactApp"/>
-          <include name="InsertContactGetCountryApp"/>
         </methods>
-      </class> <!-- testcases.GetTableCellTextTest -->
+      </class> <!-- testcases.GetTableCellTextByXpathTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

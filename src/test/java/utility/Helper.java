@@ -53,15 +53,21 @@ public class Helper {
 	public static void waitForElementByID(WebDriver driver, String value)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 40);
-		wait.until(ExpectedConditions.elementToBeClickable(By.id(value)));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(value)));
 	}
 	
 	public static void waitForElementByClassName(WebDriver driver, String className)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 40);
-		wait.until(ExpectedConditions.elementToBeClickable(By.className(className)));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(className)));
 	}
 	
+	public static WebDriverWait waitForElementByXpath(WebDriver driver, String xpath)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		return wait;
+	}	
 
 	public boolean checkForElementID(WebDriver driver, String value)
 	{
